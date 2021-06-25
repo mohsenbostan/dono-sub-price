@@ -1,7 +1,7 @@
 const app = require("express")();
 const axios = require("axios");
 
-app.get("/", async (req, res) => {
+app.get("/price", async (req, res) => {
   try {
     const donoResponse = await axios.get(
       "https://sub-api.dono.gg/v2/subscriptions/active"
