@@ -24,6 +24,7 @@ router.get("/", async (req, res) => {
       status: "failed",
       tiers: null,
       message: null,
+      error: err,
     });
   }
 });
