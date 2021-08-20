@@ -1,7 +1,9 @@
-const app = require("express")();
 const axios = require("axios");
 
-app.get("/price", async (req, res) => {
+const express = require("express");
+const router = express.Router();
+
+router.get("/", async (req, res) => {
   try {
     const donoResponse = await axios.get(
       "https://sub-api.dono.gg/v2/subscriptions/active"
@@ -26,4 +28,4 @@ app.get("/price", async (req, res) => {
   }
 });
 
-module.exports = app;
+module.exports = router;
